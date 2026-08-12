@@ -1,3 +1,30 @@
-h1{
-    background-color: aqua;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dashboard{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-rows: 1fr 5fr;
+
+}
+
+.sidebar{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-color: rgb(75, 178, 178);
+}
+
+.header{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: rgb(46, 87, 87);
+}
+
+.main-content{
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: rgb(125, 157, 157);
+
 }
