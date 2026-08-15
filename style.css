@@ -1,7 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
+
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    font-family: "roboto" , Arial, Helvetica, sans-serif;
 }
 .dashboard{
     width: 100vw;
@@ -11,11 +19,26 @@
     grid-template-rows: 1fr 5fr;
 
 }
-
 .sidebar{
     grid-column: 1/2;
     grid-row: 1/4;
     background-color: rgb(75, 178, 178);
+    display: grid;
+    padding: 15px;
+    grid-template-rows: 0.8fr 1.5fr 4fr;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: inherit;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 15%;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 5px;
+    /* background-color: rgb(114, 99, 99); */
+
 }
 
 .header{
