@@ -54,14 +54,19 @@ a{
     padding: 10px;
 
 }
+.top-row, .bottom-row{
+    align-items: center;
 
+}
 .top-row a{
     display: grid;
     grid-auto-flow: column;
     justify-content: right;
     margin-right: 10%;
     gap: 5%;
+    align-items: center;
 }
+
 .bottom-row a{
     display: grid;
     grid-auto-flow: column;
