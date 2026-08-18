@@ -8,25 +8,33 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    height: 100vh;
+    width: 100vw;
+}
 body{
     font-family: "roboto" , Arial, Helvetica, sans-serif;
+        height: 100%;
+        width: 100%;
 }
 
 .dashboard{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 20% 80%;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    
 
 }
 .sidebar{
+    height: 100%;
     grid-column: 1/2;
-    grid-row: 1/4;
-    background-color: rgb(75, 178, 178);
+    grid-row: 1/3;
+    background-color:rgb(25, 146, 212);
     display: grid;
     padding: 15px;
-    grid-template-rows: 0.8fr 1.5fr 4fr;
+    grid-template-rows: 1fr 2fr 5fr;
 }
 a{
     text-decoration: none;
@@ -44,7 +52,7 @@ a{
 
 .header{
     grid-area: 1 / 2 / 2 / 3;
-    background-color: rgb(46, 87, 87);
+    background-color:white;
     display: grid;
     grid-template-rows: 1fr 2fr;
 }
@@ -81,6 +89,9 @@ button{
     width: 70px;
     height: 30px;
     border-radius: 15px;
+    color: white;
+    border: none;
+    background-color: rgb(25, 146, 212);
 }
 
 .main-content{
@@ -88,26 +99,29 @@ button{
     background-color: #e2e8f0;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    height: 100%;
 }
 .cards{
     background-color: #e2e8f0;
     grid-area: 1 / 1 / 3 / 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr repeat(3,2fr);
+    grid-template-rows: auto repeat(3,1fr);
     padding: 15px 10px 10px; 
     gap: 15px;
+    height: 100%;
 }
 .cards > h5{
     grid-area: 1 / 1 / 2 / 3;
 }
 .card{
+    border-radius: 5px;
     background-color: #ffffff;
-    border: 2px solid ;
+    border-left: 6px solid rgb(240, 180, 41);
     display: grid;
-    grid-template-rows: 80% 20%;
+    grid-template-rows: 4fr 1fr;
     padding: 20px 15px;
+    min-height: 0;
 }
 .card .card-bottom{
     justify-self: flex-end;
@@ -115,4 +129,38 @@ button{
     display: grid;
     grid-auto-flow: column;
     gap: 10px;
+}
+
+
+.announcements .unit , .trending .trending-unit{
+    border-bottom: 2px solid rgb(209, 208, 208);
+    padding: 10px;
+    background-color: #ffffff;
+
+}
+.trending .trending-unit{
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    border: none;
+}
+.trending-unit img{
+    width: 40px;
+}
+
+input{
+    border: #ffffff;
+    border-radius: 10px;
+    width: 90%;
+    background-color: rgb(212, 218, 227);
+}
+.announcements, .trending{
+    margin-right: 10%;
+
+}
+.announcements > h5, .trending > h5{
+    padding: 10%;
+}
+* {
+    /* outline: 1px solid red; */
 }
