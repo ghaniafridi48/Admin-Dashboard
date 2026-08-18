@@ -156,6 +156,7 @@ input{
 }
 .announcements, .trending{
     margin-right: 10%;
+    margin-bottom: 12px;
 
 }
 .announcements > h5, .trending > h5{
